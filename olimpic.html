@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> proyecto #3 modal </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="modal">
+
+            <span class="title">
+                <h2>¿En que ciudad estas?</h2>
+            </span>
+
+            <div class="texto">
+                <p>Recuerda que nuestros precios y coberturas de productos de supermercado varian
+                    segun tu ubicacion
+                </p>
+                <p> para brindarte una mejor seleccion tu departamento y ciudad </p>
+            </div>
+            <div class="cuadritos">
+                <input placeholder="dpto" list="departamento">
+                <datalist id="departamento">
+                    <option value="Atlantico"></option>
+                    <option value="bolivar"></option>
+                    <option value="scre"></option>
+                </datalist>
+                <input placeholder="ciudades" list="ciudad">
+                <datalist id="ciudad">
+                    <option value="barranquilla"> </option>
+                    <option value="cartagena"> </option>
+                    <option value="sincelejo"></option>
+                </datalist>
+
+            </div>
+            <div class="boton">
+                <button type="submit" class="subimbutton ">ELEGIR</button>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
