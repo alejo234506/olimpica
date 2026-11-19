@@ -1,51 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> proyecto #3 modal </title>
+    <title>Proyecto #3 modal</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <div class="main">
-        <div class="modal">
+    <header class="barra">
+        <span class="ubicacion">Ubicación: <strong id="ubicacionActual">sin elegir</strong></span>
+        <button type="button" id="abrirModal" class="boton-secundario">Cambiar ciudad</button>
+    </header>
 
-            <span class="title">
-                <h2>¿En que ciudad estas?</h2>
-            </span>
+    <div class="main" id="overlay" hidden>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="tituloModal">
+
+            <button type="button" class="cerrar" id="cerrarModal" aria-label="Cerrar">&times;</button>
+
+            <h2 class="title" id="tituloModal">¿En qué ciudad estás?</h2>
 
             <div class="texto">
-                <p>Recuerda que nuestros precios y coberturas de productos de supermercado varian
-                    segun tu ubicacion
-                </p>
-                <p> para brindarte una mejor seleccion tu departamento y ciudad </p>
-            </div>
-            <div class="cuadritos">
-                <input placeholder="dpto" list="departamento">
-                <datalist id="departamento">
-                    <option value="Atlantico"></option>
-                    <option value="bolivar"></option>
-                    <option value="scre"></option>
-                </datalist>
-                <input placeholder="ciudades" list="ciudad">
-                <datalist id="ciudad">
-                    <option value="barranquilla"> </option>
-                    <option value="cartagena"> </option>
-                    <option value="sincelejo"></option>
-                </datalist>
-
-            </div>
-            <div class="boton">
-                <button type="submit" class="subimbutton ">ELEGIR</button>
+                <p>Recuerda que nuestros precios y coberturas de productos de supermercado varían
+                    según tu ubicación.</p>
+                <p>Para brindarte una mejor experiencia, selecciona tu departamento y ciudad.</p>
             </div>
 
+            <form id="formUbicacion">
+                <div class="cuadritos">
+                    <label for="departamento">Departamento</label>
+                    <select id="departamento" required>
+                        <option value="">Selecciona un departamento</option>
+                    </select>
+
+                    <label for="ciudad">Ciudad</label>
+                    <select id="ciudad" required disabled>
+                        <option value="">Primero elige un departamento</option>
+                    </select>
+                </div>
+
+                <div class="boton">
+                    <button type="submit" class="subimbutton">ELEGIR</button>
+                </div>
+            </form>
 
         </div>
     </div>
 
+    <script src="./script.js"></script>
 </body>
 
 </html>
